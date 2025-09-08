@@ -1,0 +1,14 @@
+DRY- don't repeat yourself
+YAGNI - You Ain't gonna need it
+KISS - keep it simple,stupid
+
+
+Break logic into reusable modules
+1. Use classes & methods efficiently
+ * Encapsulate related logic within the class
+ * create small focused method that performs one single task
+ * reuse methods across different parts of code
+2. Follow SRP- Single Responsibility Principle
+   * Each class should have one responsibility
+3. Use Interfaces & Abstract Classes
+   * define interfaces for common behaviour

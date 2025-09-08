@@ -1,0 +1,142 @@
+Codeshare logo
+ ShareSign UpLog In
+55
+​
+56
+   A. Introduction to Generics: Type Safety
+57
+      1. Generic Stack: Create a generic Stack<T> class with push and pop methods. Implement it using an ArrayList.
+58
+      2. Generic Max Method: Write a generic method that finds the maximum element in an array of comparable objects.
+59
+      3. Type-Safe Cache: Implement a simple type-safe cache using generics. The cache should store key-value pairs, where both the key and value types are generic.
+60
+      
+61
+   B. Generic Classes and Methods
+62
+      1. Generic Stack: Implement a generic Stack<T> class with push, pop, and peek methods. Ensure that the stack can hold elements of any type.
+63
+      2. Generic Max: Write a generic method findMax(T[] array) that finds the maximum element in an array of comparable objects. Assume that the type T implements the Comparable<T> interface.
+64
+      3. Generic Pair Utility: Create a utility class with a generic method that swaps the keys and values of a Pair<K, V> object, returning a new Pair<V, K> object.
+65
+      4. Custom Generic Map: Implement a simplified generic Map<K, V> class with put, get, and remove methods. Use arrays internally to store the key-value pairs.
+66
+      
+67
+   C. Bounded Type Parameters
+68
+      1. Create a Generic Class with Upper Bound: Create a generic class ListProcessor<T extends List> that has a method to print the size of the list. Instantiate it with ArrayList and LinkedList.
+69
+      2. Create a Generic Method with Multiple Bounds: Create a generic method that accepts an object that implements both Comparable and Serializable interfaces. The method should serialize the object to a file.
+70
+      3. Lower Bounded Wildcard: Write a method that adds an Integer to a list that can hold Number or any of its superclasses.
+71
+      
+72
+   D. Lambda Expressions: Functional Interfaces
+73
+      1. Create a functional interface called StringConverter with a method that takes a String as input and returns a String as output. Implement this interface using a lambda expression that converts a string to uppercase.
+74
+      2. Write a method that takes a list of integers and a Predicate<Integer> as input and returns a new list containing only the integers that satisfy the predicate. Use this method to filter out all even numbers from a list of integers.
+75
+      3. Create a functional interface called Calculator with a method that takes two integers as input and returns an integer as output. Implement this interface using lambda expressions for addition, subtraction, multiplication, and division.
+76
+      4. Given a list of strings, use a method reference to sort the list in alphabetical order.
+77
+   
+78
+   E. Method References
+79
+      1. Static Method Reference: Create a functional interface called NumberParser with a method that takes a string and returns an integer. Use a static method reference from the Integer class.
+80
+      2. Instance Method Reference (Particular Object): Create a class Counter with an instance method increment. Create an instance of Counter and use an instance method reference to increment the counter multiple times using a functional interface.
+81
+      3. Instance Method Reference (Arbitrary Object): Given a list of strings, use a method reference to trim each string in the list (using String::trim).
+82
+      4. Constructor Reference: Create a functional interface that creates a new ArrayList from a given array. Use a constructor reference to ArrayList to implement this interface.
+83
+      
+84
+IV. Java 8+:
+85
+​
+86
+   A. Streams API: Processing Data Collections
+87
+      1. Given a list of integers, use the Streams API to find the sum of all even numbers greater than 10.
+88
+      2. Given a list of strings, use the Streams API to find the longest string.
+89
+      3. Given a list of Person objects (with name and age properties), use the Streams API to find the average age of people whose names start with "A".
+90
+      4. Using the Product class from the previous example, create a stream pipeline to find the names of all products that cost more than INR50 and belong to the "Electronics" category, sorted alphabetically.
+91
+      
+92
+   B. Date and Time API: java.time package
+93
+      1. Date Arithmetic: Write a program that takes a date as input (year, month, day) and calculates the date 3 weeks from that date.
+94
+      2. Time Zone Conversion: Given a specific LocalDateTime, convert it to ZonedDateTime for both "Asia/Tokyo" and "Europe/London" time zones and print the results.
+95
+      3. Event Countdown: Create a program that calculates the number of days, hours, and minutes until a specific future event (e.g., a product launch, a birthday).
+96
+      4. Parse and Format: Take date in the format "MM/dd/yyyy hh:mm a" and convert to "yyyy-MM-dd HH:mm:ss"
+97
+      
+98
+   C. Default and Static Methods in Interfaces
+99
+      1. Create an interface called Calculator with methods add(int a, int b) and subtract(int a, int b). Add a default method multiply(int a, int b) that provides a default implementation by returning a * b. Create a class MyCalculator that implements Calculator and overrides only the add and subtract methods. Test all three methods.
+100
+      2. Create two interfaces, Flyable and Swimmable, each with a default method move(). Create a class Duck that implements both interfaces. Resolve the diamond problem by overriding the move() method in Duck and providing a combined implementation (e.g., print "Duck is flying and swimming").
+101
+
+102
+V. Logging Fundamentals:
+103
+
+104
+   A. Introduction to Logging
+105
+      1. Identify Logging Opportunities: Consider a simple Java application you've worked on (e.g., a basic calculator or a "Hello, World!" program). Identify at least three places where adding logging statements would be beneficial for debugging or monitoring. Specify what information you would log at each location and at what logging level (e.g., DEBUG, INFO, WARN, ERROR).
+106
+      2. Design a Log Message Format: Create a template for a log message format that includes a timestamp, logging level, class name, method name, and a message. Explain why you chose the specific format and how it would improve log readability and analysis.
+107
+      3. Error Handling and Logging: Write a short Java code snippet that simulates a potential error scenario (e.g., dividing by zero, accessing an out-of-bounds array element). Implement error handling using a try-catch block and log the exception details (including the stack trace) at the ERROR level.
+108
+​
+109
+VI. Debugging:
+110
+​
+111
+   A. IntelliJ IDEA Debugger: Setting Breakpoints:
+112
+      1. Line Breakpoint Exercise: Write a simple Java program that calculates the factorial of a number. Set a line breakpoint inside the loop to observe the intermediate values.
+113
+      2. Method Breakpoint Exercise: Create a class with multiple methods. Set method breakpoints on different methods and observe the order in which they are hit during execution.
+114
+      3. Field Watchpoint Exercise: Create a class with a private field. Set a field watchpoint on the field and observe when it's accessed and modified.
+115
+      4. Exception Breakpoint Exercise: Write a program that intentionally throws a NullPointerException. Set an exception breakpoint for NullPointerException and observe the program pausing when the exception is thrown.
+116
+​
+117
+   B. Step-Over, Step-Into, Step-Out: Navigating Code Execution:
+118
+      1. Debugging a Simple Calculation: Create a Java program with a few methods that perform arithmetic operations (addition, subtraction, multiplication, division). Introduce a bug in one of the methods (e.g., incorrect calculation). Use Step-Into, Step-Over, and Step-Out to locate and fix the bug.
+119
+      2. Debugging a String Manipulation: Write a Java program that manipulates strings using various methods (e.g., substring, replace, toUpperCase). Introduce a bug that causes the string to be formatted incorrectly. Use the debugging commands to trace the execution and identify the source of the error. Use Smart Step-Into when a single line has multiple string operations.
+120
+      3. Debugging a Loop: Create a Java program with a for or while loop that iterates through an array or list. Introduce a bug that causes the loop to terminate prematurely or access an invalid index. Use the debugging commands to step through the loop iterations and identify the cause of the bug.
+121
+
+
+
+
+
+px
+Hide Ads
