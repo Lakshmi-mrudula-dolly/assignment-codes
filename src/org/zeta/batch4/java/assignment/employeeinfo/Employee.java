@@ -2,9 +2,9 @@ package org.zeta.batch4.java.assignment.employeeinfo;
 
 public class Employee {
     private String name;
-    private String salary;
+    public int salary;
 
-    public Employee(String name, String salary) {
+    public Employee(String name, int salary) {
         this.name = name;
         this.salary = salary;
     }
@@ -17,11 +17,8 @@ public class Employee {
         this.name = name;
     }
 
-    public String getSalary() {
-        return salary;
-    }
-
-    public void setSalary(String salary) {
-        this.salary = salary;
+    @Override
+    public String toString() {
+        return "name : "+name+", salary : "+salary;
     }
 }
